@@ -2,8 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import '../style/header.scss';
 
-const Header = () => 
-        <div className="header">
+const Header = () => (
+        <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -26,7 +26,7 @@ const Header = () =>
       
           
         </div>
-;
+);
  
 export default Header;
   
