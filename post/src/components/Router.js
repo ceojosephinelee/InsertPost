@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import {HashRouter as Router, Routes, Link, Route, Switch} from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
@@ -17,7 +17,6 @@ const AppRouter = ({isLoggedIn, userObj}) => {
         <Route path="/signup" element={<Signup/>}></Route>
         <Route path="/profile">{<Profile userObj={userObj}/>}</Route>
         <Route path="/:id"><div>잘못들어옴</div></Route>
-
       </Routes>
  
     );
