@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 
-export default function Login(){
+export default function Signup(){
     return(
+        
         <>
           login
           <form>
