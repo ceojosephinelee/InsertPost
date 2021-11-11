@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { Fragment, useState } from "react";
 import Header from "./Header";
 
 import {BrowserRouter, Route, Switch ,Routes} from 'react-router-dom';
@@ -15,21 +16,22 @@ function App() {
   const [userObj, setuserObj] = useState("");
   return (
     <div>
-      <header>
+      수정중
+      {/* <header>
         <Header isLoggedIn={isLoggedIn} userObj={userObj}/>
       </header>
-      
-      <Routes>     
-        <Route exact path="/"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-        <Route path="/home"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>      
-        <Route path="/read"><Read isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-        <Route path="/write"><Write isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-        <Route path="/login"><Login isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-        <Route path="/signup"><Signup isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-        <Route path="/profile">{<Profile userObj={userObj}/>}</Route>
-        <Route path="/:id"><div>잘못들어옴</div></Route>
-        
-      </Routes>
+      <Routes> 
+        <Fragment>    
+          <Route exact path="/"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+          <Route path="/home"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>      
+          <Route path="/read"><Read isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+          <Route path="/write"><Write isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+          <Route path="/login"><Login isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+          <Route path="/signup"><Signup isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+          <Route path="/profile">{<Profile userObj={userObj}/>}</Route>
+          <Route path="/:id"><div>잘못들어옴</div></Route>
+        </Fragment>
+      </Routes> */}
       
     </div>
   );
