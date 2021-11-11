@@ -13,7 +13,7 @@ function App() {
       <header>
         <Header isLoggedIn={isLoggedIn} userObj={userObj}/>
       </header>
-      {/* <AppRouter isLoggedIn={isLoggedIn} userObj={userObj}></AppRouter> */}
+      <AppRouter isLoggedIn={isLoggedIn} userObj={userObj}></AppRouter>
     </div>
   );
 }
