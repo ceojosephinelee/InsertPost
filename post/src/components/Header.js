@@ -1,8 +1,8 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, Switch} from "react-router-dom";
 import '../style/header.scss';
 
-const Header = () => (
+const Header = (isLoggedIn) => (
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -13,8 +13,14 @@ const Header = () => (
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <Link to="/signup">Log in</Link>
-                  
+                  <Switch>
+                    {isLoggedIn ? 
+                      <Link to="/profile">My Profile</Link>
+                      : 
+                      <Link to="/signup">Log in</Link>
+                    }
+                  </Switch>
+                              
                 </ul>
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
