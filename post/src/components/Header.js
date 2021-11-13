@@ -2,7 +2,7 @@ import React from "react";
 import {Link, Switch} from "react-router-dom";
 import '../style/header.scss';
 
-const Header = (isLoggedIn) => (
+const Header = ({isLoggedIn}) => (
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -13,14 +13,7 @@ const Header = (isLoggedIn) => (
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <Switch>
-                    {isLoggedIn ? 
-                      <Link to="/profile">My Profile</Link>
-                      : 
-                      <Link to="/signup">Log in</Link>
-                    }
-                  </Switch>
-                              
+                  {isLoggedIn ? <Link to="/profile">My Profile</Link> : <Link to="/signup">Log in</Link>}        
                 </ul>
                 <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>

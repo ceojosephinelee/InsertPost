@@ -6,7 +6,7 @@ import Write from './Write';
 import Home from './Home';
 import Profile from './Profile';
 import {BrowserRouter, Route, Switch ,Routes} from 'react-router-dom';
-export default function AppRouter({isLoggedIn, userObj}) {
+export default function AppRouter({isLoggedIn, userObj, upload}) {
     return (
         <>
         
@@ -14,9 +14,9 @@ export default function AppRouter({isLoggedIn, userObj}) {
           <Switch> 
                
               <Route exact path="/"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-              <Route path="/home"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>      
+              <Route path="/home"><Home isLoggedIn={isLoggedIn} userObj={userObj} upload={upload}/></Route>      
               <Route path="/read"><Read isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
-              <Route path="/write"><Write isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
+              <Route path="/write"><Write isLoggedIn={isLoggedIn} userObj={userObj} upload={upload}/></Route>
               <Route path="/login"><Login isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
               <Route path="/signup"><Signup isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
               <Route path="/profile">{<Profile userObj={userObj}/>}</Route>

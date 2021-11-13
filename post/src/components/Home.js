@@ -1,9 +1,9 @@
 
 import '../style/home.scss';
 import {Link} from "react-router-dom";
-
 import React, { useState } from "react";
-export default function Home() {
+import Post from './Post';
+export default function Home({upload}) {
     let [ likes, likes변경 ] = useState(0);
     return (
         <>
@@ -36,18 +36,17 @@ export default function Home() {
                 </div>
                 <div class="col-10">
                     <div className="rightpostarea">
-                        <div className="rightpostbox">
+                      <div>
+                          <Post upload={upload}/>
+                      </div>
+                      <div className="rightpostbox">
                             <div className="profilecircle"></div>
                             <div className="time"></div>
                             <div className="title"></div>
                             <div className="passage"></div>
                             <div className="postimg"></div>
-                            <div className="likes">
-                              
-
-                            </div>
-                            
-                        </div>
+                            <div className="likes"></div>   
+                      </div>
                         <div className="movepage">
                           <nav aria-label="Page navigation example">
                             <ul class="pagination">

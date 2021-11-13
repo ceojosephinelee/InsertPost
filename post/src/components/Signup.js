@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
+import { useHistory } from 'react-router';
 import { authService } from "../fbase.js";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import '../style/signup.scss';
@@ -9,6 +10,7 @@ export default function Signup(){
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const onChange = (e) => {
       const {target: {id, value}} =e; //e에서 target의 name과 value를 가져온다
@@ -29,7 +31,6 @@ export default function Signup(){
         const user = userCredential.user;
         updateProfile(user, {displayName: name})
         console.log(user);
-        alert('가입 완료');
       }) //await 아래 동작은 이 문장 작업이 완료되기 전까지 실행되지 않는다
     } catch(error){
       alert(error.message);
@@ -37,6 +38,8 @@ export default function Signup(){
     setName("");
     setEmail("");
     setPassword("");
+    alert('가입 완료!'+{name}+'님 환영합니다!');
+    history.push('/');
   };
 
   
@@ -80,8 +83,6 @@ export default function Signup(){
                 </div>
               </div>
               
-              
-           
               <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
           </div>  
