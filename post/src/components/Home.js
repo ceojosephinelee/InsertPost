@@ -3,6 +3,8 @@ import '../style/home.scss';
 import {Link} from "react-router-dom";
 import React, { useState } from "react";
 import Post from './Post';
+import Postfront from './Postfront';
+
 export default function Home({upload}) {
     let [ likes, likes변경 ] = useState(0);
     return (
@@ -11,33 +13,31 @@ export default function Home({upload}) {
             
             <div class="container">
               <div class="row">
-                <div class="col-2">
-                  <div class="container">
-                    <div class="col">
-                      <div class="row-4">
-                        <div className="sidebox1">
-                          <div className="loginbox">로그인하면 프로필 박스로 바뀌게</div>
-                          <div className="writebox"><Link to="/write">글쓰기</Link></div>
-                        </div> 
-                      </div>
-                      <div class="row-4">
-                        <div className="sidebox2">
-                          <div className="all">전체 글</div>
-                          <ul className="frontend">frontend
-                            <ol className="html">html</ol>
-                            <ol className="css">css</ol>
-                            <ol className="js">js</ol>                         
-                          </ul>
-                          <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
-                        </div>
-                      </div>
-                    </div>    
-                  </div>                     
+                <div class="col-3">
+                  
+         
+                  <div className="sidebox1">
+                    <div className="loginbox">
+                    </div>
+                    <div className="writebox"><Link to="/write">글쓰기</Link></div>
+                    <div className="all">전체 글</div>
+                    <ul className="frontend">frontend
+                      <ol className="html">html</ol>
+                      <ol className="css">css</ol>
+                      <ol className="js">js</ol>                         
+                    </ul>
+                    <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
+                  </div> 
+                      
+                      
+                       
+                                       
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                     <div className="rightpostarea">
                       <div>
-                          <Post upload={upload}/>
+                        <Postfront/>
+                        <Post upload={upload}/>
                       </div>
                       <div className="rightpostbox">
                             <div className="profilecircle"></div>

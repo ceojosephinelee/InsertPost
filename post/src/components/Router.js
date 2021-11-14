@@ -5,7 +5,7 @@ import Read from './Read';
 import Write from './Write';
 import Home from './Home';
 import Profile from './Profile';
-import {BrowserRouter, Route, Switch ,Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Switch } from 'react-router-dom';
 export default function AppRouter({isLoggedIn, userObj, upload}) {
     return (
         <>

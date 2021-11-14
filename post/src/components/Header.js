@@ -13,12 +13,19 @@ const Header = ({isLoggedIn}) => (
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  {isLoggedIn ? <Link to="/profile">My Profile</Link> : <Link to="/signup">Log in</Link>}        
+                  
+                          
                 </ul>
                 <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" type="search" placeholder="입력하세요" aria-label="Search"></input>
+                  <button class="btn btn-outline-success" type="submit">검색</button>
                 </form>
+                
+                <ul>
+                  <button type="button" class="btn btn-primary">{isLoggedIn ? <Link to="/profile">My Profile</Link> : <Link to="/signup">Log in</Link>}</button>
+                  
+
+                </ul>
               </div>
             </div>
           </nav>
