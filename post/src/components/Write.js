@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { dbService } from '../fbase';
-import { addDoc, collection, query, onSnapshot, orderBy } from "@firebase/firestore";
+import { addDoc, collection, query, onSnapshot, orderBy, updateDoc } from "@firebase/firestore";
 import { useHistory } from 'react-router';
 import '../style/write.scss';
 
@@ -17,6 +17,7 @@ function Write({userObj, upload}) {
             content: content,
             createdAt: Date.now(),
             creatorId: userObj,
+            thumbs: 0,
         });
         upload = !upload;
         alert("글이 게시되었습니다");

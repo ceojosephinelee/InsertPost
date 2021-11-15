@@ -1,28 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../style/read.scss';
+import { useLocation } from "react-router";
 import { dbService } from '../fbase';
+import { doc, collection, query, where, getDoc, updateDoc} from "@firebase/firestore";
+import { async } from "@firebase/util";
 
-const postTitle = "";
-export default function Read({key}) {
-  const getMyPosts = async() => {
+
+export default function Read() {
+  const [init, setInit] = useState(false);
+
+  const location = useLocation();
+  const doc_key = location.state.key;
+  console.log(doc_key);
+  const postTitle = "";
+
+  /*const getMyPosts = async() => {
     const docRef = collection(dbService, "posts");
-    const q = query(docRef, where("id", "==", {key}));
+    const q = query(docRef, where("key", "==", doc_key));
     const querySnapshot = await getDoc(q);
     querySnapshot= (doc) => {
       postTitle = doc.title;
+      console.log(doc.id);
     }
   }
 
   useEffect(() => {
+    setInit(true);
     getMyPosts();
-    console.log(postTitle);
-  }, [])
+  }, []);*/
 
-export default function Read() {
-  let [ 따봉, 따봉변경 ] = useState(0);
-    return (
+
+  const [ thumb, setThumb ] = useState(0);
+  // const onThumbClick = () => {
+  //   if(thumb == 0){
+  //     setThumb(1);
+  //   } else if(thumb == 1){
+  //     setThumb(0);
+  //   }
+  // }
+
+  // useEffect( async()=>{
+  //   const docRef = doc(dbService, "posts");
+  //   await updateDoc(docRef,{
+  //     thumbs: thumbs+thumb
+  //   })
+
+  // },[thumb]);
+
+  return (
+    <div>
+    {init ?
         <>
-          <div className="readbox">
+          <div className="readbox" >
             <div className="headerbar">
               <div className="readtitle">
                 <h1>제목</h1>           
@@ -36,10 +65,9 @@ export default function Read() {
 
             </div>
             <div className="readpostarea">
-                <div className="readpostimg">post사진
-                </div>
+                <div className="readpostimg">post사진</div>
                 <div className="readpostcontent">post글</div>
-                <div className="likes"><p> 공감 <span onClick={ ()=>{ 따봉변경(따봉 + 1) } } >👍</span> { 따봉 }</p></div>
+                <div className="likes"><p> 공감 <span onClick={ ()=>{ setThumb(thumb + 1) } } >👍</span> { thumb }</p></div>
             </div>
   
           </div>
@@ -52,14 +80,8 @@ export default function Read() {
                 </ul>
               </nav>
           </div>
-          
-          
 
-
-
-
-
-            
-        </>
+        </> 
+        : "Loading" } </div>
     )
 }
