@@ -13,13 +13,16 @@ export default function Home({upload}) {
             
             <div class="container">
               <div class="row">
-                <div class="col-3">
-                  
-         
-                  <div className="sidebox1">
-                    <div className="loginbox">
+                <div class="col-3 ">    
+                  <div className="loginprofilebox">
+                    <div className="profilebox">프로필 박스</div>
+                    <div className="writebutton">
+                        <Link to="/write"style={{textDecoration: 'none'}}>글쓰기</Link>
                     </div>
-                    <div className="writebox"><Link to="/write">글쓰기</Link></div>
+                  </div>
+                  <div className="categorybox">  
+                    categories
+                    
                     <div className="all">전체 글</div>
                     <ul className="frontend">frontend
                       <ol className="html">html</ol>
@@ -27,11 +30,7 @@ export default function Home({upload}) {
                       <ol className="js">js</ol>                         
                     </ul>
                     <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
-                  </div> 
-                      
-                      
-                       
-                                       
+                  </div>                                       
                 </div>
                 <div class="col-9">
                     <div className="rightpostarea">

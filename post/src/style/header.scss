@@ -1,5 +1,53 @@
 .header{
-    .container-fluid{
+    
+    
+    nav{
+        padding:0px 100px;
+        height:75px;
+        background:white!important;
+        
+        a{
+            color:#708FFF;
+            text-decoration:none;
+            font-family: Antonio;
+            font-style: normal;
+            font-weight: bold;
+            
+        }
+        .collapse{
+            form{
+                height:50px;
+                input{
+                    
+                    border: 2px solid #708FFF;
+                }
+                button:hover{
+                    border: 2px solid #708FFF;
+                    color:#708FFF;
+                    background:white;
+                   
+                }
+                button{
+                    background:#708FFF;
+                    color:white;
+                    border: 2px solid #708FFF;
+                    
+                }
+                ul{
+                    button{
+                        height:50px;
+                        
+                    
+                    }
+                }
+                
+                
+            }
+            
+
+            
+        }
         
     }
+
 }

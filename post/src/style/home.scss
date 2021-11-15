@@ -1,9 +1,51 @@
-.sidebox1{
-    background:gray;
+.container{
+    .row{
+        margin-top:50px;
+        .loginprofilebox{
+            box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+            border-radius: 8px;
+            background:white;
+            height:200px;
+            .writebutton{
+                
+                
+                height:40px;
+                background:#708FFF;
+                color:white;
+                width:80px; 
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                 
+                font-family: Arial;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                border-radius: 4px;
+                
+            }
+        }
+        .categorybox{
+            
+            box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+            border-radius: 8px;
+            background:white;
+            height:300px;
+            margin:25px 0px;
+            padding:20px;
+            
+        }
+        
+        .rightpostarea{
+            box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+            border-radius: 8px;
+            
+            background:white;
+            padding:2%;
+            
+        }
+
+    }
+
 }
 
-.rightpostarea{
-    
-    background:gray;
-    height:600px;
-}
