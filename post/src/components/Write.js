@@ -37,7 +37,7 @@ function Write({userObj, upload}) {
 
   return (
     <>
-          글쓰기
+        
           <div className="writebox">
             <form onSubmit={onSubmit} /*action="writerAction"*/ method="post">
                 <div class="dropdown">
@@ -50,9 +50,7 @@ function Write({userObj, upload}) {
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </div>
-	            <input type="hidden" name="bdGroup"></input>
-	            <input type="hidden" name="bdOrder"></input>
-	            <input type="hidden" name="bdIndent"></input>
+	            
 	            <input type="text" name="bdTitle" class="form-control mt-4 mb-2" onChange={onChange} value={title}
 	            	placeholder="제목을 입력해주세요." required
 	            ></input>
