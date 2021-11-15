@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
 import '../style/read.scss';
 
 export default function Read() {
+  let [ 따봉, 따봉변경 ] = useState(0);
     return (
         <>
           <div className="readbox">
@@ -21,7 +22,7 @@ export default function Read() {
                 <div className="readpostimg">post사진
                 </div>
                 <div className="readpostcontent">post글</div>
-                <div className="likes">공감</div>
+                <div className="likes"><p> 공감 <span onClick={ ()=>{ 따봉변경(따봉 + 1) } } >👍</span> { 따봉 }</p></div>
             </div>
   
           </div>
