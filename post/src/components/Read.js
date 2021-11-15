@@ -7,7 +7,7 @@ export default function Read() {
           <div className="readbox">
             <div className="headerbar">
               <div className="readtitle">
-                  제목             
+                <h1>제목</h1>           
               </div>
               <div className="readwritter">글쓴이</div>
               <div className="readwrittentime">글쓴 시간</div>
@@ -27,8 +27,12 @@ export default function Read() {
           </div>
             
           <div className="otherpages">
-              <div className="previouspage">이전 글</div>
-              <div className="nextpage">다음 글</div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">이전 글</a></li>
+                  <li class="page-item"><a class="page-link" href="#">다음 글</a></li>
+                </ul>
+              </nav>
           </div>
           
           
