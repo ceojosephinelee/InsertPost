@@ -36,8 +36,7 @@ export default function Home({upload}) {
                 <div class="col-9">
                     <div className="rightpostarea">
                       <div>
-                        <Postfront/>
-                        <Post upload={upload}/>
+                        <Postfront upload={upload}/>
                       </div>
                       <div className="rightpostbox">
                             <div className="profilecircle"></div>

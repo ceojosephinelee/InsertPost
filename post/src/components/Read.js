@@ -1,13 +1,30 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { collection, query, where, getDoc } from "@firebase/firestore";
 import '../style/read.scss';
+import { dbService } from '../fbase';
 
-export default function Read() {
+const postTitle = "";
+export default function Read({key}) {
+  const getMyPosts = async() => {
+    const docRef = collection(dbService, "posts");
+    const q = query(docRef, where("id", "==", {key}));
+    const querySnapshot = await getDoc(q);
+    querySnapshot= (doc) => {
+      postTitle = doc.title;
+    }
+  }
+
+  useEffect(() => {
+    getMyPosts();
+    console.log(postTitle);
+  }, [])
+
     return (
         <>
           <div className="readbox">
             <div className="headerbar">
               <div className="readtitle">
-                  제목             
+                            
               </div>
               <div className="readwritter">글쓴이</div>
               <div className="readwrittentime">글쓴 시간</div>
