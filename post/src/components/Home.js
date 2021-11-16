@@ -15,9 +15,14 @@ export default function Home({upload}) {
               <div class="row">
                 <div class="col-3 ">    
                   <div className="loginprofilebox">
-                    <div className="profilebox">프로필 박스</div>
+                    <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
+                      <a><span className="name">이지현</span>님 안녕하세요</a>
+                      
+                      
+                    </div>
+                    
                     <div className="writebutton">
-                        <Link to="/write"style={{textDecoration: 'none'}}>글쓰기</Link>
+                        <Link to="/write"style={{textDecoration: 'none',color:'white'}}>글쓰기</Link>
                     </div>
                   </div>
                   <div className="categorybox">  
@@ -37,14 +42,14 @@ export default function Home({upload}) {
                       <div>
                         <Postfront upload={upload}/>
                       </div>
-                      <div className="rightpostbox">
+                      {/*<div className="rightpostbox">
                             <div className="profilecircle"></div>
                             <div className="time"></div>
                             <div className="title"></div>
                             <div className="passage"></div>
                             <div className="postimg"></div>
                             <div className="likes"></div>   
-                      </div>
+    </div>*/}
                         <div className="movepage">
                           <nav aria-label="Page navigation example">
                             <ul class="pagination">

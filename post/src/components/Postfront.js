@@ -44,7 +44,7 @@ export default function Postfront({upload}) {
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start" alt="사진"></img>
+                      <img src="..." class="img-fluid rounded-start " alt="사진"></img>
                     </div>
                   </div>
                 </div>

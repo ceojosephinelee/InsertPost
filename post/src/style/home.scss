@@ -5,11 +5,25 @@
             box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
             border-radius: 8px;
             background:white;
-            height:200px;
+            height:100px;
+            padding:5%;
+            
+            .profilebox{
+                display:flex;
+                justify-content:center;             
+                .name{
+                    color:#708FFF;
+                    font-size:20px;
+                    font-family:Roboto;
+                }
+                a{
+
+                }
+            }
             .writebutton{
-                
-                
-                height:40px;
+                margin:auto;
+                margin-top:11px;
+                height:30px;
                 background:#708FFF;
                 color:white;
                 width:80px; 
@@ -42,7 +56,22 @@
             
             background:white;
             padding:2%;
+            margin-bottom:60px;
             
+            .movepage{    
+                nav{
+                    
+                    .pagination{
+                        display:flex;
+                        justify-content:center;                        
+                        .page-item{
+                            box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+                            border-radius: 8px;
+                            border:none;
+                        }
+                    }      
+                }
+            }
         }
 
     }

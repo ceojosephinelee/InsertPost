@@ -19,8 +19,9 @@ const Header = ({isLoggedIn}) => (
                   <input className="form-control me-2" type="search" placeholder="입력하세요" aria-label="Search"></input>
                   <button className="btn btn-outline-success w-25" type="submit">Search</button>
                   <ul>
-                    
-                    <button type="button" class="btn btn-primary">{isLoggedIn ? <Link to="/profile"style={{textDecoration: 'none'}}>My Profile</Link> : <Link to="/signup"style={{textDecoration: 'none'}}>Log in</Link>}</button>
+                    {isLoggedIn ? <Link to="/profile"style={{textDecoration: 'none'}}><button type="button" class="btn btn-primary">Log out</button></Link> : <Link to="/signup"style={{textDecoration: 'none'}}>
+                      <button type="button" class="btn btn-primary">Log in</button>
+                    </Link>}
                   </ul>
                   
                 </form>              
