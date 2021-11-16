@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import '../style/postfront.scss';
 import {Link} from "react-router-dom";
 import { dbService } from '../fbase';
@@ -19,25 +20,24 @@ export default function Postfront({upload}) {
     });
   }, [upload]);
 
-  const path = "";
-  const unLoad = ({id}) => {
-    path = "/read/"+ id;
-  } 
+const history = useHistory();
 
   return (
       posts.map((post) =>( 
-        <Link to={{
-          pathname: `/read/${post.id}`,
-            state: { key: post.id, }
-        }}>
           <>
             <div className="postbox" key={post.id}> 
                 <div class="card" >
                   <div class="row g-0">
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-writer">{post.creatorId}</h5>
-                        <h5 class="card-title">{post.title}</h5>
+                        <p class="card-writer">{post.creatorId}</p>
+                          <h5 class="card-title" onClick={()=>{history.push({
+                            pathname: `/read/${post.id}`,
+                            state:{ 
+                              title: post.title, 
+                              content: post.content, 
+                              writer: post.creatorId }
+                          })}}>{post.title}</h5>
                         <p class="card-text">{post.content}</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         <p> 공감 <span>👍</span> { post.thumb }</p>
@@ -50,7 +50,7 @@ export default function Postfront({upload}) {
                 </div>
             </div>
           </>
-        </Link>
+        
       ))
     )
 }
