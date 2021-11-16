@@ -21,21 +21,23 @@
                     
                     border: 2px solid #708FFF;
                 }
-                button:hover{
+                button{
                     border: 2px solid #708FFF;
                     color:#708FFF;
                     background:white;
                    
                 }
-                button{
+                button:hover{
                     background:#708FFF;
-                    color:white;
+                    color:white!important;
                     border: 2px solid #708FFF;
                     
                 }
                 ul{
                     button{
                         height:50px;
+                        font-size:14px;
+                        width:100px;
                         
                     
                     }

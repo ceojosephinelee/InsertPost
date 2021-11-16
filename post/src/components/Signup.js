@@ -47,6 +47,7 @@ export default function Signup(){
         
         <>
           <div className="signupbox">
+            <span>회원가입</span>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -64,26 +65,35 @@ export default function Signup(){
               </div>  
             </nav>    
             <form onSubmit={onSubmit}>
-              <div class="row mb-3">
-                <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputName3" required value={name} onChange={onChange}></input>
+              <div class="row mb-3 one">
+                
+                <div class="col-sm-10 w-100">
+                  <input type="text" class="form-control" id="inputName3" placeholder="Name" required value={name} onChange={onChange}></input>
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" required value={email} onChange={onChange}></input>
+              <div class="row mb-3 two">
+                
+                <div class="col-sm-10 w-100">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required value={email} onChange={onChange}></input>
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" required value={password} onChange={onChange}></input>
+              <div class="row mb-3 three">
+                
+                <div class="col-sm-10 w-100">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required value={password} onChange={onChange}></input>
                 </div>
+              </div>
+              <div class="row mb-3 four">
+                <div className="buttongroup">
+                  <button type="submit" class="btn btn-primary">Sign up with Email</button>
+                  <button type="submit" class="btn btn-primary">Log in with <img src="./img\googlelogin.png"></img></button>
+                  <button type="submit" class="btn btn-primary">Log in with <img src="./img\githublogo.png"></img></button>
+
+                </div>
+                
+                  
               </div>
               
-              <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
           </div>  
         </>
