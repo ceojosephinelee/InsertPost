@@ -4,9 +4,11 @@ import {Link} from "react-router-dom";
 import React, { useState } from "react";
 import Post from './Post';
 import Postfront from './Postfront';
+import { authService } from '../fbase';
+import ProfileBox from './ProfileBox';
 
-export default function Home({upload}) {
-    let [ likes, likes변경 ] = useState(0);
+export default function Home({isLoggedIn, upload}) {
+    let [ likes, likes변경 ] = useState(0); 
     return (
         <>
           
@@ -16,14 +18,12 @@ export default function Home({upload}) {
                 <div class="col-lg-3 d-none d-lg-block">    
                   <div className="loginprofilebox">
                     <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
-                      <a><span className="name">이지현</span>님 안녕하세요</a>
-                      
-                      
+                      <ProfileBox isLoggedIn={isLoggedIn}/>
+                      {/* <a><span className="name">{user.displayName}</span>님 안녕하세요</a> */}
                     </div>
-                    
-                    <div className="writebutton">
+                    {/* <div className="writebutton">
                         <Link to="/write"style={{textDecoration: 'none',color:'white'}}>글쓰기</Link>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="categorybox">  
                     categories
