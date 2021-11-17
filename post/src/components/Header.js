@@ -2,6 +2,7 @@ import React from "react";
 import {Link, Switch} from "react-router-dom";
 import '../style/header.scss';
 
+
 const Header = ({isLoggedIn}) => (
         <div class="header">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">

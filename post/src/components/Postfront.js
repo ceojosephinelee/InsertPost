@@ -36,11 +36,13 @@ export default function Postfront({upload}) {
                   <div class="row g-0">
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-writer">{post.creatorId}</h5>
-                        <h5 class="card-title">{post.title}</h5>
-                        <p class="card-text">{post.content}</p>
+                        <p class="card-writer">{post.creatorId}</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <p> 공감 <span>👍</span> { post.thumb }</p>
+                        
+                        <p class="card-title">{post.title}</p>                     
+                        <p class="card-text">{post.content}</p>
+                        
+                        <p class="thumb"> 공감 <span>👍</span> { post.thumb }</p>
                       </div>
                     </div>
                     <div class="col-md-4">

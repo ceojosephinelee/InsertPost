@@ -13,7 +13,7 @@ export default function Home({upload}) {
             
             <div class="container">
               <div class="row">
-                <div class="col-3 ">    
+                <div class="col-lg-3 d-none d-lg-block">    
                   <div className="loginprofilebox">
                     <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
                       <a><span className="name">이지현</span>님 안녕하세요</a>
@@ -37,7 +37,7 @@ export default function Home({upload}) {
                     <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
                   </div>                                       
                 </div>
-                <div class="col-9">
+                <div class="col-lg-9 col-md-12">
                     <div className="rightpostarea">
                       <div>
                         <Postfront upload={upload}/>
