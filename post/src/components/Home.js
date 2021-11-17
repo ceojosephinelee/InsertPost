@@ -15,7 +15,7 @@ export default function Home({isLoggedIn, upload}) {
             
             <div class="container">
               <div class="row">
-                <div class="col-lg-3 d-none d-lg-block">    
+                <div class="col-lg-3 ">    
                   <div className="loginprofilebox">
                     <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
                       <ProfileBox isLoggedIn={isLoggedIn}/>
