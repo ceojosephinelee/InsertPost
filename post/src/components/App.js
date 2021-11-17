@@ -25,14 +25,15 @@ function App() {
   }, []);
 
   return (
+    
     <div className="body">
-     <header>
-       <Header isLoggedIn={isLoggedIn} userObj={userObj}/>
-     </header>
-    { init ?
-      <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} upload={upload}></AppRouter>
-      : "Initialzing..."
-    }
+       <header>
+         <Header isLoggedIn={isLoggedIn} userObj={userObj}/>
+       </header>
+      { init ?
+        <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} upload={upload}></AppRouter>
+        : "Initialzing..."
+      }
     </div>
 
 

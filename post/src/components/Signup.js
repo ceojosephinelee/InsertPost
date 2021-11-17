@@ -53,11 +53,11 @@ export default function Signup(){
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">회원가입</a>
+                      <a class="nav-link active" style={{color:'black'}} aria-current="page" href="#" >회원가입</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">
-                        <Link to="/login">로그인</Link>
+                        <Link to="/login" style={{textDecoration:'none', color:'gray'}}>로그인</Link>
                       </a>
                     </li>
                   </ul>

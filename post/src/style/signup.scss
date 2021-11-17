@@ -2,7 +2,7 @@
     span{
         margin:0px 10px;
     }
-
+    
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -15,6 +15,7 @@
     border-radius: 8px;
     margin-top:40px;
     padding:2%;
+    margin-bottom:40px;
     .navbar{
         margin-top:5px;
         font-family: Roboto;
@@ -23,10 +24,9 @@
         font-size: 16px;
         li{
             .nav-item{
+                
                 a{
-                    text-decoration:none;
-                    text-decoration:none;
-                    color: #606060;
+                    
                     font-family:Roboto;
                     font-style:normal;
                     font-weight:normal;

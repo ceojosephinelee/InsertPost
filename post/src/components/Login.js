@@ -47,7 +47,7 @@ export default function Login() {
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
                         <a class="nav-link" href="#">
-                          <Link to="/signup">회원가입</Link>
+                          <Link to="/signup" style={{textDecoration:'none',color:'gray'}}>회원가입</Link>
                         </a>
                       </li>  
                       <li class="nav-item">

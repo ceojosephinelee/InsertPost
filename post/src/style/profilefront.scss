@@ -1,0 +1,65 @@
+
+.afterloginbox{
+    
+    .name{
+        color:#708FFF;
+        font-size:20px;
+        font-family:Roboto;
+    }
+    
+    a{
+        display:flex;
+        justify-content:center;
+
+    }
+    .afterbtns{
+        display:flex;
+        justify-content:center;
+        button{
+           
+            background:#708FFF;
+            color:white;
+            border:#708FFF;
+            margin: 2%;
+            
+
+        }
+
+    }
+                
+        
+        
+    
+}
+.beforeloginbox{
+    .loginrequired{
+        font-size:0.85em;
+        font-family:'Roboto';
+        display:flex;
+        justify-content:center;
+    }
+    .beforebtns{
+        margin-top:10px;
+        display:flex;
+        justify-content:center;
+        .signupbtn{
+            button{
+                background:#708FFF;
+                border:#708FFF;
+        
+            }
+        }
+        .loginbtn{
+            margin:0px 4%;
+            button{
+                background:#708FFF;
+                border:#708FFF;
+        
+            }
+    
+        }
+
+    }
+    
+
+}

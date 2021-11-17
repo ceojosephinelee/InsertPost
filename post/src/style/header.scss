@@ -8,16 +8,12 @@
                 }
                 .btn-outline-success{
                     display:none;
-                }
-                
+                }               
             }
         }
-
     }
-    
-    
-
 }
+
 .header{
     
     nav{
@@ -61,21 +57,31 @@
                     border: 2px solid #708FFF;
                     
                 }
-                ul{
-                    button{
-                        height:50px;
-                        font-size:14px;
-                        width:100px;
-                        
-                    
-                    }
-                }
+                
                 
                 
             }
+        
             
 
             
+        }
+        .responsivelogin{
+            button{
+                height:50px;
+                font-size:14px;
+                width:100px;
+                margin:0px 8%;
+                background:#708FFF;
+                border-color:#708FFF;
+                font-weight:600;
+            
+            }
+            button:hover{
+                background:white;
+                color:#708FFF;
+                border: 2px solid;
+            }
         }
         
     }
