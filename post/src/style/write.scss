@@ -2,6 +2,7 @@
     background:#E5E5E5;
     min-height:100vh;
     width:100%;
+    
 
 }
 .writebox{
@@ -13,6 +14,10 @@
     border-radius: 8px;
     margin-top:40px;
     margin-bottom:40px;
+    .writedropdowns{
+        display:flex;
+        gap:10px;
+    }
     .submitbox{
         display:flex;
        

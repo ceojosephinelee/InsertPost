@@ -7,27 +7,49 @@ import { authService } from '../fbase';
 import ProfileBox from './ProfileBox';
 
 export default function Home({isLoggedIn, upload, userObj}) {
-    let [ likes, likes변경 ] = useState(0); 
+    let [ likes, likes변경 ] = useState(0);
+    
     return (
         <>
             <div class="container">
               <div class="row">
-                <div class="col-lg-3 ">    
-                  <div className="loginprofilebox">
-                    <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
-                      <ProfileBox isLoggedIn={isLoggedIn} userObj={userObj}/>
-                    </div>
+                <div class="col-lg-3 ">
+                      
+                  
+                  <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
+                    <ProfileBox isLoggedIn={isLoggedIn} userObj={userObj}/>
                   </div>
-                  <div className="categorybox">  
-                    categories
+                  
+                  <div className="categorybox" id="categorysup">  
+                    <span>Categories</span>
+                    <p></p>
                     
-                    <div className="all">전체 글</div>
-                    <ul className="frontend">frontend
-                      <ol className="html">html</ol>
-                      <ol className="css">css</ol>
-                      <ol className="js">js</ol>                         
-                    </ul>
-                    <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
+                    <button type="button" class="btn btn-secondary">전체 글</button>
+                    <p></p>
+                    <div className="dropdowns">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Frontend
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">HTML</a></li>
+                          <li><a class="dropdown-item" href="#">CSS</a></li>
+                          <li><a class="dropdown-item" href="#">JS</a></li>
+                        </ul>
+                      </div>
+                      <p></p>
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Backend
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Firebase</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    
+                    
                   </div>                                       
                 </div>
                 <div class="col-lg-9">

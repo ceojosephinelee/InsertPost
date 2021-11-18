@@ -18,14 +18,18 @@ function Header({isLoggedIn}) {
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
+               
                 <h1><Link to="/home">Insert Post</Link></h1></a>
+                
+                  
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                <form className=" d-flex w-50">
-                  <input className="form-control me-2" type="search" placeholder="입력하세요" aria-label="Search"></input>
-                  <button className="btn btn-outline-success w-25" type="submit">Search</button>
-                </form>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                  <form className=" d-flex w-50">
+                    <input className="form-control me-2" type="search" placeholder="입력하세요" aria-label="Search"></input>
+                    <button className="btn btn-outline-success w-25" type="submit">Search</button>
+                  </form>
                 </div>
+                
               
             </div>
           </nav>
