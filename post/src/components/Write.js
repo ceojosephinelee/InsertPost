@@ -46,17 +46,26 @@ function Write({userObj, upload}) {
         <div className="writeboxbody"> 
           <div className="writebox">
             <form onSubmit={onSubmit} /*action="writerAction"*/ method="post">
+              <div className="writedropdowns">
                 <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    카테고리
+                    Frontend
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">HTML</a></li>
+                    <li><a class="dropdown-item" href="#">CSS</a></li>
+                    <li><a class="dropdown-item" href="#">JS</a></li>
                   </ul>
                 </div>
-	            
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Backend
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Firebase</a></li>
+                  </ul>
+                </div>
+	            </div>
 	            <input type="text" name="bdTitle" class="form-control mt-4 mb-2" onChange={onChange} value={title}
 	            	placeholder="제목을 입력해주세요." required
 	            ></input>

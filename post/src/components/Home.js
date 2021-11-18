@@ -21,16 +21,35 @@ export default function Home({isLoggedIn, upload, userObj}) {
                   </div>
                   
                   <div className="categorybox">  
-                    <span>categories</span>
+                    <span>Categories</span>
+                    <p></p>
                     
-                    <div className="all">전체 글</div>
+                    <button type="button" class="btn btn-secondary">전체 글</button>
+                    <p></p>
+                    <div className="dropdowns">
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Frontend
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">HTML</a></li>
+                          <li><a class="dropdown-item" href="#">CSS</a></li>
+                          <li><a class="dropdown-item" href="#">JS</a></li>
+                        </ul>
+                      </div>
+                      <p></p>
+                      <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Backend
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Firebase</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
                     
-                    <ul className="frontend">frontend
-                      <ol className="html">html</ol>
-                      <ol className="css">css</ol>
-                      <ol className="js">js</ol>                         
-                    </ul>
-                    <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
+                    
                   </div>                                       
                 </div>
                 <div class="col-lg-9">
