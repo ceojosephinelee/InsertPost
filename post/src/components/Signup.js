@@ -46,56 +46,60 @@ export default function Signup(){
     return(
         
         <>
-          <div className="signupbox">
-            <span>회원가입</span>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" style={{color:'black'}} aria-current="page" href="#" >회원가입</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <Link to="/login" style={{textDecoration:'none', color:'gray'}}>로그인</Link>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>  
-            </nav>    
-            <form onSubmit={onSubmit}>
-              <div class="row mb-3 one">
-                
-                <div class="col-sm-10 w-100">
-                  <input type="text" class="form-control" id="inputName3" placeholder="Name" required value={name} onChange={onChange}></input>
-                </div>
-              </div>
-              <div class="row mb-3 two">
-                
-                <div class="col-sm-10 w-100">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required value={email} onChange={onChange}></input>
-                </div>
-              </div>
-              <div class="row mb-3 three">
-                
-                <div class="col-sm-10 w-100">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required value={password} onChange={onChange}></input>
-                </div>
-              </div>
-              <div class="row mb-3 four">
-                <div className="buttongroup">
-                  <button type="submit" class="btn btn-primary">Sign up with Email</button>
-                  <button type="submit" class="btn btn-primary">Log in with <img src="./img\googlelogin.png"></img></button>
-                  <button type="submit" class="btn btn-primary">Log in with <img src="./img\githublogo.png"></img></button>
-
-                </div>
-                
+          <div className="signupbody">
+            <div className="signupbox">
+              <span>회원가입</span>
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <div class="navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" style={{color:'black'}} aria-current="page" href="#" >회원가입</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <Link to="/login" style={{textDecoration:'none', color:'gray'}}>로그인</Link>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>  
+              </nav>    
+              <form onSubmit={onSubmit}>
+                <div class="row mb-3 one">
                   
-              </div>
-              
-            </form>
-          </div>  
+                  <div class="col-sm-10 w-100">
+                    <input type="text" class="form-control" id="inputName3" placeholder="Name" required value={name} onChange={onChange}></input>
+                  </div>
+                </div>
+                <div class="row mb-3 two">
+                  
+                  <div class="col-sm-10 w-100">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required value={email} onChange={onChange}></input>
+                  </div>
+                </div>
+                <div class="row mb-3 three">
+                  
+                  <div class="col-sm-10 w-100">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required value={password} onChange={onChange}></input>
+                  </div>
+                </div>
+                <div class="row mb-3 four">
+                  <div className="buttongroup">
+                    <button type="submit" class="btn btn-primary">Sign up with Email</button>
+                    <button type="submit" class="btn btn-primary">Log in with <img src="./img\googlelogin.png"></img></button>
+                    <button type="submit" class="btn btn-primary">Log in with <img src="./img\githublogo.png"></img></button>
+  
+                  </div>
+                  
+                    
+                </div>
+                
+              </form>
+            </div> 
+  
+          </div>
+           
         </>
     );
 }

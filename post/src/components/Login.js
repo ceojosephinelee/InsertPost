@@ -39,45 +39,49 @@ export default function Login() {
 
     return (
         <>
+          <div className="loginbody">
             <div className="loginbox">
-              <span>로그인</span>
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">
-                          <Link to="/signup" style={{textDecoration:'none',color:'gray'}}>회원가입</Link>
-                        </a>
-                      </li>  
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">로그인</a>
-                      </li>
-                      
-                    </ul>
+                <span>로그인</span>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                    <div class="navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <Link to="/signup" style={{textDecoration:'none',color:'gray'}}>회원가입</Link>
+                          </a>
+                        </li>  
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">로그인</a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>  
+                </nav>    
+                <form onSubmit={onSubmit}>
+                  <div class="row mb-3">
+                    
+                    <div class="col-sm-10 w-100">
+                      <input type="email" class="form-control" id="inputEmail3"placeholder="Email" required value={email} onChange={onChange}></input>
+                    </div>
                   </div>
-                </div>  
-              </nav>    
-              <form onSubmit={onSubmit}>
-                <div class="row mb-3">
+                  <div class="row mb-3">
+                    
+                    <div class="col-sm-10 w-100">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required value={password} onChange={onChange}></input>
+                    </div>
+                  </div>
                   
-                  <div class="col-sm-10 w-100">
-                    <input type="email" class="form-control" id="inputEmail3"placeholder="Email" required value={email} onChange={onChange}></input>
-                  </div>
-                </div>
-                <div class="row mb-3">
                   
-                  <div class="col-sm-10 w-100">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required value={password} onChange={onChange}></input>
-                  </div>
-                </div>
-                
-                
-             
-                <button type="submit" class="btn btn-primary">Log in</button>
-              </form>
-    
-            </div>
+               
+                  <button type="submit" class="btn btn-primary">Log in</button>
+                </form>
+      
+              </div>
+  
+          </div>
+              
         
         </>    
     )
