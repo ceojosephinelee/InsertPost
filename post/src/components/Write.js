@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { dbService } from '../fbase';
-import { addDoc, collection, query, onSnapshot, orderBy, updateDoc } from "@firebase/firestore";
+import { addDoc, collection} from "@firebase/firestore";
 import { useHistory } from 'react-router';
 import '../style/write.scss';
+import EditorComponent from './EditorComponent';
 
 function Write({userObj, upload}) {
   const [title, setTitle] = useState("");
@@ -36,9 +37,13 @@ function Write({userObj, upload}) {
     
   };
 
+  function onEditorChange(value) {
+        setContent(value)
+  }
+
   return (
     <>
-        
+     
           <div className="writebox">
             <form onSubmit={onSubmit} /*action="writerAction"*/ method="post">
                 <div class="dropdown">
@@ -56,9 +61,10 @@ function Write({userObj, upload}) {
 	            	placeholder="제목을 입력해주세요." required
 	            ></input>
 	            <div class="form-group">
-	            	<textarea class="form-control" rows="10" name="bdContent" onChange={onChange} value={content}
+                <div><EditorComponent onChange={onEditorChange} value={content} ></EditorComponent></div>
+	            	{/* <textarea class="form-control" rows="10" name="bdContent" onChange={onChange} value={content}
 	            		placeholder="내용을 입력해주세요" required
-	            	></textarea>
+	            	></textarea> */}
 	            </div>
 	            <button type="submit" class="btn btn-secondary mb-3">등록</button>
             </form>

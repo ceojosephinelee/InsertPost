@@ -7,7 +7,7 @@ import { dbService } from '../fbase';
 import { collection, query, onSnapshot, orderBy } from "@firebase/firestore";
 
 
-export default function Postfront({upload}) {
+export default function Postfront({isLoggedin, upload}) {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     let q = query(collection(dbService, "posts"), orderBy("createdAt", "desc")); 
@@ -22,6 +22,8 @@ export default function Postfront({upload}) {
 
 const history = useHistory();
 
+
+
   return (
       posts.map((post) =>( 
           <>
@@ -33,14 +35,16 @@ const history = useHistory();
                         <p class="card-writer">{post.creatorId}</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 
-                        <p class="card-title" onClick={()=>{history.push({
-                          pathname: `/read/${post.id}`,
-                          state:{ 
-                            title: post.title, 
-                            content: post.content, 
-                            writer: post.creatorId }
-                        })}}>{post.title}</p>
-                        <p class="card-text">{post.content}</p>
+                        <p class="card-title" onClick={()=>{
+                          if(isLoggedin){history.push({
+                            pathname: `/read/${post.id}`,
+                            state:{ 
+                              title: post.title, 
+                              content: post.content, 
+                              writer: post.creatorId }})}
+                          else alert("로그인이 필요합니다")
+                        }}>{post.title}</p>
+                        <p class="card-text"dangerouslySetInnerHTML={{__html: post.content}}></p>
 
                         <p class="thumb"> 공감 <span>👍</span> { post.thumb }</p>
                       </div>

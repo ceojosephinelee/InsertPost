@@ -2,28 +2,21 @@
 import '../style/home.scss';
 import {Link} from "react-router-dom";
 import React, { useState } from "react";
-import Post from './Post';
 import Postfront from './Postfront';
 import { authService } from '../fbase';
 import ProfileBox from './ProfileBox';
 
-export default function Home({isLoggedIn, upload}) {
+export default function Home({isLoggedIn, upload, userObj}) {
     let [ likes, likes변경 ] = useState(0); 
     return (
         <>
-          
-            
             <div class="container">
               <div class="row">
                 <div class="col-lg-3 ">    
                   <div className="loginprofilebox">
                     <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
-                      <ProfileBox isLoggedIn={isLoggedIn}/>
-                      {/* <a><span className="name">{user.displayName}</span>님 안녕하세요</a> */}
+                      <ProfileBox isLoggedIn={isLoggedIn} userObj={userObj}/>
                     </div>
-                    {/* <div className="writebutton">
-                        <Link to="/write"style={{textDecoration: 'none',color:'white'}}>글쓰기</Link>
-                    </div> */}
                   </div>
                   <div className="categorybox">  
                     categories
@@ -40,7 +33,7 @@ export default function Home({isLoggedIn, upload}) {
                 <div class="col-lg-9 col-md-12">
                     <div className="rightpostarea">
                       <div>
-                        <Postfront upload={upload}/>
+                        <Postfront upload={upload} isLoggedin={isLoggedIn}/>
                       </div>
                       {/*<div className="rightpostbox">
                             <div className="profilecircle"></div>
