@@ -53,8 +53,9 @@ export default function Read() {
                 <div className="readwrittentime">글쓴 시간</div>
                 {writer ? 
                   <div className="correctdelete">
-                    <div className="correct">수정</div>
-                    <div className="delete">삭제</div>
+                    <button type="button" class="correct btn btn-secondary">수정</button>
+                    <button type="button" class="delete btn btn-secondary">삭제</button>
+                    
                   </div>
                 : 
                   <div></div>}

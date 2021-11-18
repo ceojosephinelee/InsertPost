@@ -16,12 +16,14 @@ export default function ProfileBox({isLoggedIn, userObj}) {
     return (
         <>
         {isLoggedIn ? 
-            <>  
+            <>
+              
+                
               <div className="afterloginbox">
                 <a><span className="name">{user.displayName}</span>님 안녕하세요</a>
                 <div className="afterbtns">
-                  <button type="button" class="btn btn-primary"><Link to="/write"style={{textDecoration: 'none',color:'white'}} userObj={userObj}>글쓰기</Link></button>
-                  <button type="button" class="btn btn-primary" onClick={onLogOutClick}>Log out</button>
+                  <button type="button" class="btn btn-primary w-100"><Link to="/write"style={{textDecoration: 'none',color:'white'}} userObj={userObj}>글쓰기</Link></button>
+                  <button type="button" class="btn btn-primary w-100" onClick={onLogOutClick}>Log out</button>
                 </div>
               </div>
             </>

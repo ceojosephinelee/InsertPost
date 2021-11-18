@@ -98,8 +98,8 @@ export default function Signup(){
                 <div class="row mb-3 four">
                   <div className="buttongroup">
                     <button type="submit" class="btn btn-primary">Sign up with Email</button>
-                    <button type="submit" class="btn btn-primary" name="google" onClick={onSocialClick}>Log in with <img src="./img\googlelogin.png"></img></button>
-                    <button type="submit" class="btn btn-primary" name="github" onClick={onSocialClick}>Log in with <img src="./img\githublogo.png"></img></button>
+                    <button type="submit" class="btn btn-primary" name="google" onClick={onSocialClick}>Sign up with <img src="./img\googlelogin.png"></img></button>
+                    <button type="submit" class="btn btn-primary" name="github" onClick={onSocialClick}>Sign up with <img src="./img\githublogo.png"></img></button>
   
                   </div>
                   

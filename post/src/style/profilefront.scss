@@ -1,65 +1,74 @@
 
-.afterloginbox{
+.profilebox{
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
+    background:white;
     
-    .name{
-        color:#708FFF;
-        font-size:20px;
-        font-family:Roboto;
-    }
+    padding:5%;
+    display:flex;
+    justify-content:center;
+    .afterloginbox{
     
-    a{
-        display:flex;
-        justify-content:center;
-
-    }
-    .afterbtns{
-        display:flex;
-        justify-content:center;
-        button{
-           
-            background:#708FFF;
-            color:white;
-            border:#708FFF;
-            margin: 2%;
+        .name{
+            color:#708FFF;
+            font-size:20px;
+            font-family:Roboto;
+        }
+        
+        
+        .afterbtns{
+            display:flex;
             
-
-        }
-
-    }
+            
+            button{
+               
+                background:#708FFF;
+                color:white;
+                border:#708FFF;
+                margin: 2%;
                 
-        
-        
+                
     
-}
-.beforeloginbox{
-    .loginrequired{
-        font-size:0.85em;
-        font-family:'Roboto';
-        display:flex;
-        justify-content:center;
-    }
-    .beforebtns{
-        margin-top:10px;
-        display:flex;
-        justify-content:center;
-        .signupbtn{
-            button{
-                background:#708FFF;
-                border:#708FFF;
-        
-            }
-        }
-        .loginbtn{
-            margin:0px 4%;
-            button{
-                background:#708FFF;
-                border:#708FFF;
-        
             }
     
         }
-
+                    
+            
+            
+        
+    }
+    .beforeloginbox{
+        .loginrequired{
+            font-size:0.85em;
+            font-family:'Roboto';
+            
+        }
+        .beforebtns{
+            margin-top:10px;
+            display:flex;
+            justify-content:center;
+            .signupbtn{
+                button{
+                    background:#708FFF;
+                    border:#708FFF;
+            
+                }
+            }
+            .loginbtn{
+                margin:0px 4%;
+                button{
+                    background:#708FFF;
+                    border:#708FFF;
+            
+                }
+        
+            }
+    
+        }
+        
+    
     }
     
-
+    
+    
 }
