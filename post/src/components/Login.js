@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router';
 import { authService } from '../fbase';
-import { signInWithEmailAndPassword } from '@firebase/auth';
+import { signInWithEmailAndPassword, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from '@firebase/auth';
 import '../style/login.scss';
 
 export default function Login() {

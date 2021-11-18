@@ -5,13 +5,11 @@ import Read from './Read';
 import Write from './Write';
 import Home from './Home';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
+
 export default function AppRouter({isLoggedIn, userObj, upload}) {
     return (
-        <>
-        
-          
-          <Switch> 
-               
+        <>    
+          <Switch>    
               <Route exact path="/"><Home isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
               <Route path="/home"><Home isLoggedIn={isLoggedIn} userObj={userObj} upload={upload}/></Route>      
               <Route path="/read"><Read isLoggedIn={isLoggedIn} userObj={userObj}/></Route>
@@ -22,7 +20,5 @@ export default function AppRouter({isLoggedIn, userObj, upload}) {
             
           </Switch> 
         </>  
-        
-
     );
 };
