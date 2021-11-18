@@ -1,10 +1,18 @@
 import '../style/profilefront.scss';
 import {Link} from "react-router-dom";
 import { authService } from '../fbase';
+import { useHistory } from 'react-router';
 import React, { useState } from "react";
 
-export default function ProfileBox({isLoggedIn}) {
+export default function ProfileBox({isLoggedIn, userObj}) {
     const user = authService.currentUser;
+    const history = useHistory();
+    const onLogOutClick = () => {
+        authService.signOut();
+        alert("로그아웃 되었습니다")
+        history.push("/");
+    }
+
     return (
         <>
         {isLoggedIn ? 
@@ -12,16 +20,10 @@ export default function ProfileBox({isLoggedIn}) {
               <div className="afterloginbox">
                 <a><span className="name">{user.displayName}</span>님 안녕하세요</a>
                 <div className="afterbtns">
-                  
-                  <button type="button" class="btn btn-primary"><Link to="/write"style={{textDecoration: 'none',color:'white'}}>글쓰기</Link></button>
-                  <button type="button" class="btn btn-primary">Log out</button>
-
+                  <button type="button" class="btn btn-primary"><Link to="/write"style={{textDecoration: 'none',color:'white'}} userObj={userObj}>글쓰기</Link></button>
+                  <button type="button" class="btn btn-primary" onClick={onLogOutClick}>Log out</button>
                 </div>
-                
-                  
               </div>
-                
-                
             </>
             : 
             <>  

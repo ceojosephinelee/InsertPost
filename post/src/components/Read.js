@@ -61,7 +61,7 @@ export default function Read() {
             </div>
             <div className="readpostarea">
                 <div className="readpostimg">post사진</div>
-                <div className="readpostcontent">{postContent}</div>
+                <div className="readpostcontent" dangerouslySetInnerHTML={{__html: postContent}}></div>
                 <div className="likes"><p> 공감 <span onClick={ ()=>{ setThumb(thumb + 1) } } >👍</span> { thumb }</p></div>
             </div>
   
