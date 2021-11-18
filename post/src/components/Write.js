@@ -18,7 +18,6 @@ function Write({userObj, upload}) {
             content: content,
             createdAt: Date.now(),
             creatorId: userObj,
-            thumbs: 0,
         });
         upload = !upload;
         alert("글이 게시되었습니다");

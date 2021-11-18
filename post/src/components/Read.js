@@ -1,17 +1,30 @@
 import React, { useState, useEffect, Component } from "react";
 import '../style/read.scss';
-//import Heart from './img\heart.png'
-//import EmptyHeart from '.img\empty_heart.png'
 import { useLocation } from "react-router";
+import { useHistory } from 'react-router';
 import { authService, dbService } from '../fbase';
-import { doc, updateDoc, onSnapshot} from "@firebase/firestore";
+import { doc, updateDoc, onSnapshot, deleteDoc} from "@firebase/firestore";
 import { async } from "@firebase/util";
 
 
 export default function Read() {
 
   const location = useLocation();
+  const history = useHistory();
   const post = location.state.postObj;
+  const key = String(post.id);
+
+  const onEdit = () => {
+    history.push({
+      pathname: `/edit/${post.id}`,
+      state:{ postObj: post,} })
+  }
+  
+  const onDelete = async() => {
+    await deleteDoc(doc(dbService, "posts", key));
+    alert("글이 삭제되었습니다");
+    history.push("/");
+  }
 
   const [writer, setWriter] = useState(false);
 
@@ -36,9 +49,8 @@ export default function Read() {
                 <div className="readwrittentime">글쓴 시간</div>
                 {writer? 
                   <div className="correctdelete">
-                    <button type="button" class="correct btn btn-secondary">수정</button>
-                    <button type="button" class="delete btn btn-secondary">삭제</button>
-                    
+                    <button className="correct" onClick={onEdit}>수정</button>
+                    <button className="delete" onClick={onDelete}>삭제</button>
                   </div>
                 : 
                   <div></div>}
@@ -47,6 +59,7 @@ export default function Read() {
               <div className="readpostarea">
                   <div className="readpostimg">post사진</div>
                   <div className="readpostcontent" dangerouslySetInnerHTML={{__html: post.content}}></div>
+
               </div>
     
             </div>
