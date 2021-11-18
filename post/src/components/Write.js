@@ -60,7 +60,11 @@ function Write({userObj, upload}) {
 	            		placeholder="내용을 입력해주세요" required
 	            	></textarea>
 	            </div>
-	            <button type="submit" class="btn btn-secondary mb-3">등록</button>
+              <div className="submitbox">
+                <button type="submit" class="btn btn-secondary">등록</button>
+
+              </div>  
+	            
             </form>
 
           </div>  
