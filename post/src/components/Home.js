@@ -20,7 +20,7 @@ export default function Home({isLoggedIn, upload, userObj}) {
                     <ProfileBox isLoggedIn={isLoggedIn} userObj={userObj}/>
                   </div>
                   
-                  <div className="categorybox">  
+                  <div className="categorybox" id="categorysup">  
                     <span>Categories</span>
                     <p></p>
                     

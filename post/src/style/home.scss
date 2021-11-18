@@ -1,9 +1,20 @@
 @media(max-width:750px){
+    .profilebox{
+        margin-top:-30px;
+    }
     .row{
+        
         .rightpostarea{
             width:100%;
         }
         .col-lg-3{
+            .profilebox{
+                margin-bottom:20px;
+            }
+            .categorybox{
+                display:none;
+            }
+            
             
         }
         
@@ -11,6 +22,7 @@
     
 
 }
+
 .container{
     .row{
         margin-top:50px;
@@ -19,7 +31,8 @@
             font-family: Antonio;
             .dropdowns{
                 display:flex;
-                gap:10px;
+                gap:8px;
+                
             }
             
             span{
