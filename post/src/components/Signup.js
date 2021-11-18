@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router';
 import { authService } from "../fbase.js";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import '../style/signup.scss';
 
 export default function Signup(){
@@ -42,6 +42,17 @@ export default function Signup(){
     history.push('/');
   };
 
+  const onSocialClick = async(e) => {
+    const {target:{name}} = e;
+    let provider;
+    if(name === "google"){
+        provider = new GoogleAuthProvider(); 
+    } else if(name === "github"){
+        provider = new GithubAuthProvider();
+    }
+    const data = await signInWithPopup(authService, provider);
+    history.push('/');
+};
   
     return(
         
@@ -87,8 +98,8 @@ export default function Signup(){
                 <div class="row mb-3 four">
                   <div className="buttongroup">
                     <button type="submit" class="btn btn-primary">Sign up with Email</button>
-                    <button type="submit" class="btn btn-primary">Log in with <img src="./img\googlelogin.png"></img></button>
-                    <button type="submit" class="btn btn-primary">Log in with <img src="./img\githublogo.png"></img></button>
+                    <button type="submit" class="btn btn-primary" name="google" onClick={onSocialClick}>Log in with <img src="./img\googlelogin.png"></img></button>
+                    <button type="submit" class="btn btn-primary" name="github" onClick={onSocialClick}>Log in with <img src="./img\githublogo.png"></img></button>
   
                   </div>
                   
