@@ -26,16 +26,7 @@ function Header({isLoggedIn}) {
                   <button className="btn btn-outline-success w-25" type="submit">Search</button>
                 </form>
                 </div>
-              <div class="responsivelogin">
-                {isLoggedIn 
-                  ? 
-                  <button type="button" class="btn btn-primary" style={{textDecoration: 'none'}} >Log out</button> 
-                  : 
-                  <Link to="/signup"style={{textDecoration: 'none'}}>
-                    <button type="button" class="btn btn-primary">Log in</button>
-                  </Link>
-                }
-              </div>
+              
             </div>
           </nav>
         </div>

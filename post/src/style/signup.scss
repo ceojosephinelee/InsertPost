@@ -1,6 +1,13 @@
-@media(max-width:768px){
+
+@media(max-width:700px){
     .signupbox{
-        width:80%;
+        width:280px;
+    }
+}
+
+@media(min-width:701px){
+    .signupbox{
+        width:350px;
     }
 }
 .signupbody{
@@ -18,7 +25,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
-    width:300px;
+    
     
     margin:auto;
     background:white;

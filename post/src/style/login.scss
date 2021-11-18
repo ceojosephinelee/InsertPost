@@ -1,8 +1,20 @@
 
+@media(max-width:700px){
+    .loginbox{
+        width:280px;
+    }
+}
+
+@media(min-width:701px){
+    .loginbox{
+        width:350px;
+    }
+}
 .loginbody{
     background:#E5E5E5;
     min-height:100vh;
 }
+
 .loginbox{
     span{
         margin:0px 10px;
@@ -12,7 +24,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
-    width:300px;
+    
     
     margin:auto;
     background:white;
