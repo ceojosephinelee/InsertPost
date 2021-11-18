@@ -30,7 +30,7 @@ export default function Home({isLoggedIn, upload, userObj}) {
                     <ul className="backend">backend<ol className="firebase">firebase</ol></ul>
                   </div>                                       
                 </div>
-                <div class="col-lg-9 col-md-12">
+                <div class="col-lg-9">
                     <div className="rightpostarea">
                       <div>
                         <Postfront upload={upload} isLoggedin={isLoggedIn}/>

@@ -42,8 +42,8 @@ function Write({userObj, upload}) {
   }
 
   return (
-    <>
-     
+      <> 
+        <div className="writeboxbody"> 
           <div className="writebox">
             <form onSubmit={onSubmit} /*action="writerAction"*/ method="post">
                 <div class="dropdown">
@@ -68,14 +68,11 @@ function Write({userObj, upload}) {
 	            </div>
               <div className="submitbox">
                 <button type="submit" class="btn btn-secondary">등록</button>
-
-              </div>  
-	            
+              </div>  	            
             </form>
-
           </div>  
-            
-        </>
+        </div>   
+      </>
     )
 } 
 
