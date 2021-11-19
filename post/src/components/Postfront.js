@@ -43,17 +43,16 @@ const history = useHistory();
                         }}> 
                 <div class="card" >
                   <div class="row g-0">
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                       <div class="card-body">
-                        
-                        <p class="card-text-category"><small class="text-muted">{post.category}</small></p>
-                        <p class="card-title" >{post.title}</p>
                         <p class="card-writer">{post.creatorId}</p>
-                        <p class="card-text-time"><small class="text-muted">{post.createdAt}</small></p>
+                        <p class="card-text"><small class="text-muted">{post.createdAt}</small></p>
+                        <p class="card-text"><small class="text-muted">{post.category}</small></p>
+                        <p class="card-title" >{post.title}</p>
                       </div>
                     </div>
-                    <div class="col-md-3">
-                      <img src=".\img\no-image.jpg" class="img-fluid rounded-start " alt="사진" ></img>
+                    <div class="col-md-4">
+                      <img src=".\img\no-image.jpg" class="img-fluid rounded-start " alt="사진" width="200" height="200"></img>
                     </div>
                   </div>
                 </div>

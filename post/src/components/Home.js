@@ -30,16 +30,11 @@ export default function Home({isLoggedIn, upload, userObj}) {
                   <div className="categorybox" id="categorysup">  
                     <span>Categories</span>
                     <p/>
-                    {/*<p id="All" onClick={onClickCategory}>전체 글</p>
-                    <p id="Frontend" onClick={onClickCategory}>프론트엔드</p>
-                    <p id="Backend" onClick={onClickCategory}>백엔드</p>
-    <p/>*/}
-                    
-                    <button type="button" class="btn btn-secondary">전체 글</button>
+                    <button type="button" class="btn btn-secondary" id="All" onClick={onClickCategory}>전체 글</button>
                     <p></p>
                     <div className="categorybtns">
-                      <button type="button" class="btn btn-secondary">Frontend</button>
-                      <button type="button" class="btn btn-secondary">Backend</button>
+                      <button type="button" class="btn btn-secondary" id="Frontend" onClick={onClickCategory}>Frontend</button>
+                      <button type="button" class="btn btn-secondary" id="Backend" onClick={onClickCategory}>Backend</button>
 
                     </div>
                     
