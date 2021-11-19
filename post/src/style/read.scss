@@ -16,29 +16,24 @@
     padding:2%;
     .headerbar{
         width:100%;
-        height:130px;
+        padding:1%;
         border-bottom:1px solid black;
-        display:block;
-        
-        .readtitle{
-            
-        }
+        display:flex;
+
+        flex-direction:column;
+
         .correctdelete{
             display:flex;
             float:right;
-            margin: -20px 10px;
+            
+            
             gap:5px;
-            
-            
-            
 
         }
     }
     .readpostarea{
         margin-top:30px;
-        .likes{
-            
-        }
+
     }
 }
 .otherpages{
