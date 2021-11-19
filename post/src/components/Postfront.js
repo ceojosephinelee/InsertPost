@@ -3,7 +3,7 @@ import { useHistory } from "react-router";
 import '../style/postfront.scss';
 import {Link} from "react-router-dom";
 import { dbService } from '../fbase';
-import { collection, query, onSnapshot, orderBy, where } from "@firebase/firestore";
+import { collection, query, onSnapshot, orderBy, where, doc } from "@firebase/firestore";
 
 
 export default function Postfront({isLoggedin, upload, category}) {
@@ -11,14 +11,8 @@ export default function Postfront({isLoggedin, upload, category}) {
   let data = category;
   useEffect(() => {
     console.log(category);
-    let q = query(collection(dbService, "posts"), orderBy("createdAt", "desc"));
-    /*if(category === "All"){
-      q = query(collection(dbService, "posts"), orderBy("createdAt", "desc"));
-    }else if(category === "Frontend"){
-      q = query(collection(dbService, "posts"), where("category", "==", "Frontend"), orderBy("createdAt", "desc"));
-    } else if(category === "Backend"){
-      q = query(collection(dbService, "posts"), where("category", "==", "Backend"), orderBy("createdAt", "desc"));
-    } */
+
+    let q = query(collection(dbService, "posts"), where("category", "==", data+""), orderBy("createdAt", "desc"));
     onSnapshot(q, (QuerySnapshot) => {
       const postArr = QuerySnapshot.docs.map((doc) => ({
         id: doc.id,
