@@ -1,28 +1,39 @@
 
 import '../style/home.scss';
 import {Link} from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Postfront from './Postfront';
 import { authService } from '../fbase';
 import ProfileBox from './ProfileBox';
 
 export default function Home({isLoggedIn, upload, userObj}) {
-    let [ likes, likes변경 ] = useState(0);
+  
+  const [category, setCategory ]= useState("All");
+
+  const onClickCategory = (e) => {
+    const {target: {id}} = e;
+    setCategory(id);
+    console.log(category);
+  }
+
+
     
     return (
         <>
             <div class="container">
               <div class="row">
                 <div class="col-lg-3 ">
-                      
-                  
                   <div className="profilebox">{/*프로필 박스(login이나 회원가입하면 로그인이나 회원가입 컴포넌트에서 profilefront컴포넌트로 전환)*/}
                     <ProfileBox isLoggedIn={isLoggedIn} userObj={userObj}/>
                   </div>
                   
                   <div className="categorybox" id="categorysup">  
                     <span>Categories</span>
-                    <p></p>
+                    <p/>
+                    <p id="All" onClick={onClickCategory}>전체 글</p>
+                    <p id="Frontend" onClick={onClickCategory}>프론트엔드</p>
+                    <p id="Backend" onClick={onClickCategory}>백엔드</p>
+                    <p/>
                     
                     <button type="button" class="btn btn-secondary">전체 글</button>
                     <p></p>
@@ -55,7 +66,7 @@ export default function Home({isLoggedIn, upload, userObj}) {
                 <div class="col-lg-9">
                     <div className="rightpostarea">
                       <div>
-                        <Postfront upload={upload} isLoggedin={isLoggedIn}/>
+                        <Postfront upload={upload} isLoggedin={isLoggedIn} category={category}/>
                       </div>
                       {/*<div className="rightpostbox">
                             <div className="profilecircle"></div>

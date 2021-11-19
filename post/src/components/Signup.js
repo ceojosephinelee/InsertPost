@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import { useHistory } from 'react-router';
 import { authService } from "../fbase.js";
-import { createUserWithEmailAndPassword, updateProfile, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import '../style/signup.scss';
 
 export default function Signup(){
@@ -27,19 +27,18 @@ export default function Signup(){
     e.preventDefault();
     try{ 
       let data;
-      data = await createUserWithEmailAndPassword(authService, email, password).then((userCredential) =>{
-        const user = userCredential.user;
-        updateProfile(user, {displayName: name})
-        console.log(user);
-      }) //await 아래 동작은 이 문장 작업이 완료되기 전까지 실행되지 않는다
+      data = await createUserWithEmailAndPassword(authService, email, password)
+      const user = authService.currentUser;
+      await updateProfile(user, {displayName: name})
+      alert('가입 완료!'+ name +'님 환영합니다!');
+      history.push('/');
+      //await 아래 동작은 이 문장 작업이 완료되기 전까지 실행되지 않는다
     } catch(error){
       alert(error.message);
     }
     setName("");
     setEmail("");
     setPassword("");
-    alert('가입 완료!'+{name}+'님 환영합니다!');
-    history.push('/');
   };
 
   const onSocialClick = async(e) => {

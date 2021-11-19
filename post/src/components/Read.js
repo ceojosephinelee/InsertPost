@@ -46,7 +46,7 @@ export default function Read() {
                   <h1>{post.title}</h1>           
                 </div>
                 <div className="readwritter">{post.creatorId}</div>
-                <div className="readwrittentime">글쓴 시간</div>
+                <div className="readwrittentime">{post.createdAt}</div>
                 {writer? 
                   <div className="correctdelete">
                     <button className="correct" onClick={onEdit}>수정</button>
@@ -57,7 +57,6 @@ export default function Read() {
   
               </div>
               <div className="readpostarea">
-                  <div className="readpostimg">post사진</div>
                   <div className="readpostcontent" dangerouslySetInnerHTML={{__html: post.content}}></div>
 
               </div>

@@ -1,16 +1,24 @@
-
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import '../style/postfront.scss';
 import {Link} from "react-router-dom";
 import { dbService } from '../fbase';
-import { collection, query, onSnapshot, orderBy } from "@firebase/firestore";
+import { collection, query, onSnapshot, orderBy, where } from "@firebase/firestore";
 
 
-export default function Postfront({isLoggedin, upload}) {
-  const [posts, setPosts] = useState([]);
+export default function Postfront({isLoggedin, upload, category}) {
+  let [posts, setPosts] = useState([]);
+  let data = category;
   useEffect(() => {
-    let q = query(collection(dbService, "posts"), orderBy("createdAt", "desc")); 
+    console.log(category);
+    let q = query(collection(dbService, "posts"), where("category", "==", {data}), orderBy("createdAt", "desc"));
+    /*if(category === "All"){
+      q = query(collection(dbService, "posts"), orderBy("createdAt", "desc"));
+    }else if(category === "Frontend"){
+      q = query(collection(dbService, "posts"), where("category", "==", "Frontend"), orderBy("createdAt", "desc"));
+    } else if(category === "Backend"){
+      q = query(collection(dbService, "posts"), where("category", "==", "Backend"), orderBy("createdAt", "desc"));
+    } */
     onSnapshot(q, (QuerySnapshot) => {
       const postArr = QuerySnapshot.docs.map((doc) => ({
         id: doc.id,
@@ -38,12 +46,13 @@ const history = useHistory();
                     <div class="col-md-8">
                       <div class="card-body">
                         <p class="card-writer">{post.creatorId}</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text"><small class="text-muted">{post.createdAt}</small></p>
+                        <p class="card-text"><small class="text-muted">{post.category}</small></p>
                         <p class="card-title" >{post.title}</p>
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <img src="..." class="img-fluid rounded-start " alt="사진"></img>
+                      <img src=".\img\no-image.jpg" class="img-fluid rounded-start " alt="사진" width="200" height="200"></img>
                     </div>
                   </div>
                 </div>
