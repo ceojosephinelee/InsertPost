@@ -1,4 +1,4 @@
-@media(max-width:750px){
+@media(max-width:993px){
     .profilebox{
         margin-top:-30px;
     }
@@ -22,6 +22,14 @@
     
 
 }
+@media(min-width:1220px){
+    .categorybox{
+        .dropdowns{
+            display:flex;
+            gap:8px;
+        }
+    }
+}
 
 .container{
     .row{
@@ -30,8 +38,8 @@
         .categorybox{
             font-family: Antonio;
             .dropdowns{
-                display:flex;
-                gap:8px;
+                
+                
                 
             }
             
