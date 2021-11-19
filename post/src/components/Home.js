@@ -39,6 +39,7 @@ export default function Home({isLoggedIn, upload, userObj}) {
                     <p></p>
                     <div className="categorybtns">
                       <button type="button" class="btn btn-secondary">Frontend</button>
+                      <p></p>
                       <button type="button" class="btn btn-secondary">Backend</button>
 
                     </div>
