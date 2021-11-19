@@ -53,7 +53,7 @@ const history = useHistory();
                       </div>
                     </div>
                     <div class="col-md-3">
-                      <img src=".\img\no-image.jpg" class="img-fluid rounded-start " alt="사진" width="200" height="200"></img>
+                      <img src=".\img\no-image.jpg" class="img-fluid rounded-start " alt="사진" ></img>
                     </div>
                   </div>
                 </div>

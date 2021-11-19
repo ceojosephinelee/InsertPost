@@ -30,37 +30,20 @@ export default function Home({isLoggedIn, upload, userObj}) {
                   <div className="categorybox" id="categorysup">  
                     <span>Categories</span>
                     <p/>
-                    <p id="All" onClick={onClickCategory}>전체 글</p>
+                    {/*<p id="All" onClick={onClickCategory}>전체 글</p>
                     <p id="Frontend" onClick={onClickCategory}>프론트엔드</p>
                     <p id="Backend" onClick={onClickCategory}>백엔드</p>
-                    <p/>
+    <p/>*/}
                     
                     <button type="button" class="btn btn-secondary">전체 글</button>
                     <p></p>
-                    <div className="dropdowns">
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Frontend
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">HTML</a></li>
-                          <li><a class="dropdown-item" href="#">CSS</a></li>
-                          <li><a class="dropdown-item" href="#">JS</a></li>
-                        </ul>
-                      </div>
-                      <p></p>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Backend
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Firebase</a></li>
-                        </ul>
-                      </div>
+                    <div className="categorybtns">
+                      <button type="button" class="btn btn-secondary">Frontend</button>
+                      <button type="button" class="btn btn-secondary">Backend</button>
 
                     </div>
                     
-                    
+                
                   </div>                                       
                 </div>
                 <div class="col-lg-9">
