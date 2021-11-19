@@ -2,8 +2,6 @@
     
     width:100%;
     margin-bottom:20px;
-    
-    
     .card{
         box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
         border-radius: 8px;
@@ -17,34 +15,31 @@
         }
         .card-text-time{
             margin-top:-10px;
-            
-
         }
         .card-title{
-            font-size:1.7em;
-
-
+            font-size:1.55em;
         }
-        .card-text-category{
+        .card-text-cat{
             font-size:1em;
             margin-top:-40px;
         }
         .thumb{
             font-size:1em;
         }
-
     }
     .col-md-3{
+        padding:2%;
         img{
             width:80%;
-            
+            margin:-20% 15%;           
         }
-
     }
     
 }
 @media(max-width:768px){
     .col-md-3{
-        display:none;
+        img{
+            display:none;
+        }
     }
 }
