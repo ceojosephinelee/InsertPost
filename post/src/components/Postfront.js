@@ -11,8 +11,11 @@ export default function Postfront({isLoggedin, upload, category}) {
   let data = category;
   useEffect(() => {
     console.log(category);
-
-    let q = query(collection(dbService, "posts"), where("category", "==", data+""), orderBy("createdAt", "desc"));
+    let q = query(collection(dbService, "posts"), orderBy("createdAt", "desc"));
+    
+    if(data === "Frontend" || data === "Backend"){
+      q = query(collection(dbService, "posts"), where("category", "==", data), orderBy("createdAt", "desc"));
+    } 
     onSnapshot(q, (QuerySnapshot) => {
       const postArr = QuerySnapshot.docs.map((doc) => ({
         id: doc.id,
@@ -20,7 +23,7 @@ export default function Postfront({isLoggedin, upload, category}) {
       }) );
       setPosts(postArr);
     });
-  }, [upload]);
+  }, [data]);
 
 const history = useHistory();
 
